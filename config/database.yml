@@ -84,7 +84,7 @@ test:
 #   username: dip_api
 #   password: <%= ENV['DIP_API_DATABASE_PASSWORD'] %>
 
-## from Learn Enough
+## from Learn Enough`
 production:
   adapter: postgresql
   encoding: unicode
