@@ -10,10 +10,49 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_22_180234) do
+ActiveRecord::Schema.define(version: 2020_04_23_141507) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "annual_reports", force: :cascade do |t|
+    t.string "year"
+    t.integer "budget"
+    t.integer "dues_split"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "cabins", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.float "multiplier"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "repairs", force: :cascade do |t|
+    t.string "category"
+    t.text "description"
+    t.date "submission_date"
+    t.boolean "priority"
+    t.text "followup"
+    t.integer "user_id"
+    t.integer "cabin_id"
+    t.integer "annual_report_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "reservations", force: :cascade do |t|
+    t.date "arrival"
+    t.date "departure"
+    t.integer "user_id"
+    t.integer "cabin_id"
+    t.integer "annual_report_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email"
