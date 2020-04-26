@@ -3,6 +3,7 @@ class CreateReservations < ActiveRecord::Migration[6.0]
     create_table :reservations do |t|
       t.date :arrival
       t.date :departure
+      t.boolean :pending
       t.integer :user_id
       t.integer :cabin_id
       t.integer :annual_report_id

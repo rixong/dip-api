@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 2020_04_23_141507) do
   create_table "reservations", force: :cascade do |t|
     t.date "arrival"
     t.date "departure"
+    t.boolean "pending"
     t.integer "user_id"
     t.integer "cabin_id"
     t.integer "annual_report_id"
