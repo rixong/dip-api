@@ -8,9 +8,11 @@
 
 AnnualReport.create(year: '2020', budget: 50000, dues_split: 45)
 
-User.create(email: 'abe@aol.com', password: '1234', password_confirmation: '1234', firstname: 'Abe', lastname: 'Apple', bday: 19940223)
-User.create(email: 'bob@aol.com', password: '1234', password_confirmation: '1234', firstname: 'Bob', lastname: 'Benton', bday: 19610718)
-User.create(email: 'con@aol.com', password: '1234', password_confirmation: '1234', firstname: 'Connie', lastname: 'Crawford', bday: 20010602)
+User.create(email: 'abe@aol.com', password: '1234', password_confirmation: '1234', firstname: 'Abe', lastname: 'Apple', bday: 19940223, admin: true)
+User.create(email: 'bob@aol.com', password: '1234', password_confirmation: '1234', firstname: 'Bob', lastname: 'Benton', bday: 19610718, admin: false)
+User.create(email: 'con@aol.com', password: '1234', password_confirmation: '1234', firstname: 'Connie', lastname: 'Crawford', bday: 20010602, admin: false)
+User.create(email: 'don@aol.com', password: '1234', password_confirmation: '1234', firstname: 'Don', lastname: 'Johnson', bday: 19740302, admin: false)
+User.create(email: 'eve@aol.com', password: '1234', password_confirmation: '1234', firstname: 'Eve', lastname: 'Labonita', bday: 19810401, admin: false)
 
 Cabin.create(name: 'Big House', description: 'The grandest and oldest', multiplier: 1)
 Cabin.create(name: 'Gray House', description: 'The second to be built. Sewells home originally.', multiplier: 0.75)

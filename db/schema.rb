@@ -60,7 +60,14 @@ ActiveRecord::Schema.define(version: 2020_04_23_141507) do
     t.string "password_digest"
     t.string "firstname"
     t.string "lastname"
+    t.string "phone"
+    t.string "address1"
+    t.string "address2"
+    t.string "city"
+    t.string "state"
+    t.string "zip"
     t.date "bday"
+    t.boolean "admin"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
