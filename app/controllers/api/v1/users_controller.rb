@@ -12,11 +12,12 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def create
-    @user = User.create(user_params)
+    user = User.new(user_params)
+    user.admin = false
     # pry
-    if @user.valid?
-      @token = encode_token(user_id: @user.id)
-      render json: { message: 'Success', user: UserSerializer.new(@user), jwt: @token }
+    if user.save
+      token = encode_token(user_id: user.id)
+      render json: { message: 'Success', user: UserSerializer.new(user), jwt: token }
     else
       render json: { message: 'failed to create user' }
     end
