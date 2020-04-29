@@ -7,6 +7,7 @@ Rails.application.routes.draw do
         get '/profile', to: 'users#profile'
         resources :reservations, only: [:index, :create]
         resources :cabins, only: [:index]
+        resources :repairs, only: [:index, :create, :update]
       end
     end
 
