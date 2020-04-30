@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2020_04_23_141507) do
 
   create_table "annual_reports", force: :cascade do |t|
     t.string "year"
+    t.boolean "current"
     t.integer "budget"
     t.integer "dues_split"
     t.datetime "created_at", precision: 6, null: false

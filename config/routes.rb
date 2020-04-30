@@ -8,6 +8,8 @@ Rails.application.routes.draw do
         resources :reservations, only: [:index, :create]
         resources :cabins, only: [:index]
         resources :repairs, only: [:index, :create, :update]
+        resources :annual_reports, only: [:index, :show, :create]
+        get '/annual_report/current', to: 'annual_reports#current'
       end
     end
 
