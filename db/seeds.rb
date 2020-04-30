@@ -15,12 +15,12 @@ User.create(email: 'con@aol.com', password: '1234', password_confirmation: '1234
 User.create(email: 'don@aol.com', password: '1234', password_confirmation: '1234', firstname: 'Don', lastname: 'Johnson', bday: 19740302, admin: false)
 User.create(email: 'eve@aol.com', password: '1234', password_confirmation: '1234', firstname: 'Eve', lastname: 'Labonita', bday: 19810401, admin: false)
 
-Cabin.create(name: 'Big House', description: 'The grandest and oldest', multiplier: 1)
-Cabin.create(name: 'Gray House', description: 'The second to be built. Sewells home originally.', multiplier: 0.75)
-Cabin.create(name: 'Winter Haven', description: 'Ken and Betty Emersons home built in the 70s. Two bedroom.', multiplier: 0.75)
-Cabin.create(name: 'Pine Away', description: 'Down by the waters edge.', multiplier: 0.5)
-Cabin.create(name: 'Hillside', description: 'Small, cozy accomodations near at the bottom of the hill. Used by Josephine Emerson in her later years.', multiplier: 0.5)
-Cabin.create(name: 'Brownie Cottage', description: 'Feel like your right on the water. Rustic but cozy.', multiplier: 0.25)
+Cabin.create(name: 'Big House', description: 'The grandest and oldest', multiplier: 1.75)
+Cabin.create(name: 'Gray House', description: 'The second to be built. Sewells home originally.', multiplier: 1.25)
+Cabin.create(name: 'Winter Haven', description: 'Ken and Betty Emersons home built in the 70s. Two bedroom.', multiplier: 1.25)
+Cabin.create(name: 'Pine Away', description: 'Down by the waters edge.', multiplier: 1.0)
+Cabin.create(name: 'Hillside', description: 'Small, cozy accomodations near at the bottom of the hill. Used by Josephine Emerson in her later years.', multiplier: 1.0)
+Cabin.create(name: 'Brownie Cottage', description: 'Feel like your right on the water. Rustic but cozy.', multiplier: 0.50)
 Cabin.create(name: 'Guest House', description: 'Frequent hangout for the younger, single set', multiplier: 0.25)
 
 Repair.create(category: 'plumbing', description: 'Leaky faucet', submission_date: 20200601, priority: true, followup: 'none', user_id: 1, cabin_id: 1, annual_report_id: 1)
