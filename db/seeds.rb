@@ -9,7 +9,7 @@
 AnnualReport.create(year: '2020', current: true, budget: 50000, dues_split: 45)
 AnnualReport.create(year: '2019', current: false, budget: 60000, dues_split: 50)
 
-User.create(email: 'abe@aol.com', password: '1234', password_confirmation: '1234', firstname: 'Abe', lastname: 'Apple', bday: 19940223, admin: true)
+User.create(email: 'abe@aol.com', password: '1234', password_confirmation: '1234', firstname: 'Abe', lastname: 'Apple', bday: 19940223, admin: true, photo_url: 'https://res.cloudinary.com/dzycwwun9/image/upload/v1588350793/DIP-connect/legjmimsdpde5nn7lxvd.jpg')
 User.create(email: 'bob@aol.com', password: '1234', password_confirmation: '1234', firstname: 'Bob', lastname: 'Benton', bday: 19610718, admin: false)
 User.create(email: 'con@aol.com', password: '1234', password_confirmation: '1234', firstname: 'Connie', lastname: 'Crawford', bday: 20010602, admin: false)
 User.create(email: 'don@aol.com', password: '1234', password_confirmation: '1234', firstname: 'Don', lastname: 'Johnson', bday: 19740302, admin: false)

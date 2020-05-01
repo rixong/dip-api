@@ -6,6 +6,13 @@ class Api::V1::UsersController < ApplicationController
     render json: { user: UserSerializer.new(current_user) }, status: :accepted
   end
 
+  def update
+    user = User.find(params[:id])
+    user.update(user_params)
+    render json: {message: 'Success: User updated.'}
+
+  end
+
   def index
     users = User.all
     render json: users
@@ -28,7 +35,7 @@ class Api::V1::UsersController < ApplicationController
     def user_params
       params.require(:user).permit(
         :email, :password, :password_confirmation, 
-        :firstname, :lastname, :bday
+        :firstname, :lastname, :bday, :photo_url
       )
     end
 

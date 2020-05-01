@@ -12,6 +12,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :state
       t.string :zip
       t.date :bday
+      t.string :photo_url
       t.boolean :admin
 
       t.timestamps
