@@ -4,6 +4,7 @@ class Api::V1::RepairsController < ApplicationController
     repair = Repair.new(repair_params)
     repair.annual_report_id = 1
     repair.submission_date = Time.new
+    repair.pending = true
     # repair.save
     if repair.save
       render json: {repair: repair, message: 'Repair created'}

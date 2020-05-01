@@ -8,6 +8,8 @@ class Api::V1::ReservationsController < ApplicationController
   def create
     # pry
     @reservation = Reservation.new(reservation_params)
+    repair.annual_report_id = 1
+    @reservation.pending = true
     if @reservation.valid?
     @reservation.save
     render json: {res: ReservationSerializer.new(@reservation), message: 'Success'}

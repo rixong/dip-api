@@ -9,8 +9,7 @@ class Api::V1::UsersController < ApplicationController
   def update
     user = User.find(params[:id])
     user.update(user_params)
-    render json: {message: 'Success: User updated.'}
-
+    render json: {user: user, message: 'success'}
   end
 
   def index

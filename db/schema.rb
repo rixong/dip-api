@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 2020_04_23_141507) do
     t.date "submission_date"
     t.boolean "priority"
     t.text "followup"
+    t.boolean "pending"
     t.integer "user_id"
     t.integer "cabin_id"
     t.integer "annual_report_id"
