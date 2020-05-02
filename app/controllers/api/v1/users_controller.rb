@@ -3,13 +3,13 @@ class Api::V1::UsersController < ApplicationController
   skip_before_action :authorized, only: [:create]
   
   def profile
-    render json: { user: UserSerializer.new(current_user) }, status: :accepted
+    render json: { user: UserSerializer.new(current_user), message: 'success' }
   end
 
   def update
     user = User.find(params[:id])
     user.update(user_params)
-    render json: {user: user, message: 'success'}
+    render json: {user: UserSerializer.new(current_user), message: 'success'}
   end
 
   def index
@@ -23,7 +23,7 @@ class Api::V1::UsersController < ApplicationController
     # pry
     if user.save
       token = encode_token(user_id: user.id)
-      render json: { message: 'Success', user: UserSerializer.new(user), jwt: token }
+      render json: { user: UserSerializer.new(user), jwt: token, message: 'success' }
     else
       render json: { message: 'failed to create user' }
     end
