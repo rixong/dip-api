@@ -5,6 +5,11 @@ class Api::V1::ReservationsController < ApplicationController
     render json: reservations
   end
 
+  def destroy
+    reservation = Reservation.find_by(id: params[:id])
+    reservation.delete()
+  end
+
   def update
     # pry
     reservation = Reservation.find_by(id: params[:id])
