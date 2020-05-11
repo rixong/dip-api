@@ -14,7 +14,7 @@ class Api::V1::RepairsController < ApplicationController
     repair.pending = true
     # repair.save
     if repair.save
-      render json: {repair: repair, message: 'Repair created'}
+      render json: {repair: RepairSerializer.new(repair), message: 'Repair created'}
     else
       render json: {message: 'Something went wrong'}
     end

@@ -1,21 +1,14 @@
 class ReservationSerializer < ActiveModel::Serializer
   
-  attributes :id, :departure, :arrival, :pending, :reserver, :cabin
+  # userId = object.user_id,
+  attributes :id, :departure, :arrival, :pending, :created_at, :userId, :cabinId
 
-  def reserver
-    {firstName: self.object.user.firstname,
-      lastName: self.object.user.lastname,
-      email: self.object.user.email,
-      userId: self.object.user.id,
-      # reserverName: `#{self.object.user.firstname} #{self.object.user.lastname}`
-    }
+  def userId
+    userId = self.object.user_id
   end
 
-  def cabin
-    {cabinName: self.object.cabin.name,
-      cabinId: self.object.cabin.id,
-      cabinMultiplier: self.object.cabin.multiplier,
-    }
-  end
+  def cabinId
+    cabinId = self.object.cabin_id
+  end 
 
 end
