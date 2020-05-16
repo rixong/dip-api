@@ -20,7 +20,6 @@ class Api::V1::UsersController < ApplicationController
   def create
     user = User.new(user_params)
     user.admin = false
-    # pry
     if user.save
       token = encode_token(user_id: user.id)
       render json: { user: UserSerializer.new(user), jwt: token, message: 'success' }
