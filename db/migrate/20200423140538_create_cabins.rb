@@ -3,6 +3,7 @@ class CreateCabins < ActiveRecord::Migration[6.0]
     create_table :cabins do |t|
       t.string :name
       t.text :description
+      t.text :owner
       t.float :multiplier
 
       t.timestamps
