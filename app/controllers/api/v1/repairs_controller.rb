@@ -21,7 +21,8 @@ class Api::V1::RepairsController < ApplicationController
   end
 
   def index
-    repairs = Repair.all
+    repairs = AnnualReport.find_by(current: true).repairs
+
     render json: repairs
   end
 
