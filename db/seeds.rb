@@ -2,22 +2,23 @@
 AnnualReport.create(year: '2019', current: false, budget: 60000, dues_split: 50)
 AnnualReport.create(year: '2020', current: true, budget: 50000, dues_split: 50)
 
-User.create(email: 'abe@aol.com', password: '1234', password_confirmation: '1234', firstname: 'Abe', lastname: 'Apple', 
+User.create(email: 'art@gmail.com', password: '1234', password_confirmation: '1234', firstname: 'Art', lastname: 'Anderson', 
   address1: '57 Lobster Ln.', address2: '', city: 'Harborside', state: 'ME', zip: '04837',
   phone: '(415) 354-5432', bday: 19940223, admin: true, photo_url: 'DIP-connect/i3knus3f007msc827a5r')
 
-User.create(email: 'bob@aol.com', password: '1234', password_confirmation: '1234', firstname: 'Bob', lastname: 'Benton', 
+User.create(email: 'bob@gmail.com', password: '1234', password_confirmation: '1234', firstname: 'Bob', lastname: 'Benton', 
   address1: '1254 Horseshoe Cv.', address2: 'Apt. 3-B' , city: 'Boston', state: 'MA', zip: '43726',  
   phone: '(415) 354-5432', bday: 19610718, admin: false, photo_url: 'DIP-connect/hf45aiy3crvkgtsaluvn')
 
-User.create(email: 'con@aol.com', password: '1234', password_confirmation: '1234', firstname: 'Connie', lastname: 'Crawford',  
+User.create(email: 'con@gmail.com', password: '1234', password_confirmation: '1234', firstname: 'Connie', lastname: 'Crawford',  
   address1: '638 Westend Ave.', address2: '', city: 'New York', state: 'NY', zip: '10012',  
   phone: '(543) 564-5699', bday: 20010602, admin: false, photo_url: 'DIP-connect/nsm0swxzjeljcv2sm2tw')
 
-User.create(email: 'don@aol.com', password: '1234', password_confirmation: '1234', firstname: 'Don', lastname: 'Johnson', 
+User.create(email: 'don@gmail.com', password: '1234', password_confirmation: '1234', firstname: 'Don', lastname: 'Johnson', 
   address1: '84 Smith Rd.', address2: '', city: 'New Haven', state: 'CT', zip: '43958', 
   phone: '(512) 936-9988', bday: 19740302, admin: false)
-User.create(email: 'eve@aol.com', password: '1234', password_confirmation: '1234', firstname: 'Eve', lastname: 'Labonita', 
+
+  User.create(email: 'eve@gmail.com', password: '1234', password_confirmation: '1234', firstname: 'Eve', lastname: 'Labonita', 
   address1: '865 Bordley Rd.', address2: '', city: 'Austin', state: 'TX', zip: '78748', 
   phone: '(312) 354-5432', bday: 19810401, admin: false)
 
