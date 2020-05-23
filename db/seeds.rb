@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 AnnualReport.create(year: '2019', current: false, budget: 60000, dues_split: 50)
-AnnualReport.create(year: '2020', current: true, budget: 50000, dues_split: 45)
+AnnualReport.create(year: '2020', current: true, budget: 50000, dues_split: 50)
 
 User.create(email: 'abe@aol.com', password: '1234', password_confirmation: '1234', firstname: 'Abe', lastname: 'Apple', 
   address1: '57 Lobster Ln.', address2: '', city: 'Harborside', state: 'ME', zip: '04837',
