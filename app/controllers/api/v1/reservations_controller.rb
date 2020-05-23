@@ -18,9 +18,11 @@ class Api::V1::ReservationsController < ApplicationController
   end
 
   def create
-    # pry
+    # 
     @reservation = Reservation.new(reservation_params)
-    @reservation.annual_report_id = 1
+    # currentReport = AnnualReport.find_by(current: true)
+    #pry
+    @reservation.annual_report_id = AnnualReport.find_by(current: true).id
     @reservation.pending = true
     if @reservation.valid?
     @reservation.save
